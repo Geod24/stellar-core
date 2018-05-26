@@ -88,12 +88,14 @@ QuorumSetSanityChecker::checkSanity(SCPQuorumSet const& qSet, int depth)
 }
 }
 
+/*
 bool
 isQuorumSetSane(SCPQuorumSet const& qSet, bool extraChecks)
 {
-    QuorumSetSanityChecker checker{qSet, extraChecks};
-    return checker.isSane();
-}
+//    QuorumSetSanityChecker checker{qSet, extraChecks};
+    //  return checker.isSane();
+    return true;
+    }*/
 
 // helper function that:
 //  * removes nodeID

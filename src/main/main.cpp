@@ -39,6 +39,16 @@
 
 INITIALIZE_EASYLOGGINGPP
 
+extern "C" {
+#if 0
+    int rt_init(void) { return 0; }
+    int rt_term(void) { return 0; }
+#else
+    int rt_init(void);
+    int rt_term(void);
+#endif
+}
+
 namespace stellar
 {
 
@@ -686,6 +696,8 @@ main(int argc, char* const* argv)
 {
     using namespace stellar;
 
+    rt_init();
+
     Logging::init();
     if (sodium_init() != 0)
     {
@@ -940,5 +952,7 @@ main(int argc, char* const* argv)
         return 1;
     }
     // run outside of catch block so that we properly capture crashes
-    return startApp(cfgFile, cfg);
+    int ret = startApp(cfgFile, cfg);
+    rt_term();
+    return ret;
 }
