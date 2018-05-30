@@ -3,9 +3,9 @@
 // of this distribution or at http://www.apache.org/licenses/LICENSE-2.0
 module scp.Stellar_types_XDR;
 
-import stdcpp.vector;
+//import stdcpp.vector;
 
-extern(C++, stellar):
+//extern(C++, stellar):
 
 alias Hash = ubyte[32];
 alias uint256 = ubyte[32];
@@ -46,7 +46,7 @@ struct SignerKey
 }
 
 // variable size as the size depends on the signature scheme used
-alias vector!ubyte Signature;
+//alias vector!ubyte Signature;
 
 alias ubyte[4] SignatureHint;
 

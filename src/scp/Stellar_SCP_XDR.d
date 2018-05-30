@@ -4,17 +4,17 @@
 module scp.Stellar_SCP_XDR;
 
 import scp.Stellar_types_XDR;
-import stdcpp.vector;
+//import stdcpp.vector;
 
-extern(C++, stellar):
+//extern(C++, stellar):
 
-alias vector!ubyte Value;
-
+//alias vector!ubyte Value;
+/*
 struct SCPBallot
 {
     uint32 counter; // n
     Value value;    // x
-}
+	}*/
 
 enum SCPStatementType
 {
@@ -24,13 +24,14 @@ enum SCPStatementType
     SCP_ST_NOMINATE = 3
 }
 
+/*
 struct SCPNomination
 {
     Hash quorumSetHash; // D
     vector!Value votes;      // X
     vector!Value accepted;   // Y
-}
-
+	}*/
+ /*
 struct SCPStatement
 {
     NodeID nodeID;    // v
@@ -73,7 +74,7 @@ struct SCPEnvelope
 {
     SCPStatement statement;
     Signature signature;
-}
+	}*/
 
 // supports things like: A,B,C,(D,E,F),(G,H,(I,J,K,L))
 // only allows 2 levels of nesting
