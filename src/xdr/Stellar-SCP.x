@@ -6,6 +6,8 @@
 
 namespace stellar
 {
+// The type used to uniquely identify a node (e.g. PublicKey or a hash)
+typedef PublicKey NodeID;
 
 typedef opaque Value<>;
 

@@ -59,8 +59,6 @@ typedef opaque Signature<64>;
 
 typedef opaque SignatureHint[4];
 
-typedef PublicKey NodeID;
-
 struct Curve25519Secret
 {
     opaque key[32];
